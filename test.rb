@@ -5,7 +5,7 @@ require "json"
 
 Benchmark.bm do |x|
   x.report("Creating records") do
-    100.times do |i|
+    10000.times do |i|
       uri = URI.parse("http://localhost:4567")
       header = { "Content-Type": "text/json" }
       item = {
